@@ -157,9 +157,7 @@ export default function Dashboard() {
                             </button>
                         </form>
 
-                        {/* Responsive list: table on sm+, cards on small */}
                         <div className="bg-white p-2 sm:p-4 rounded shadow">
-                            {/* Table for sm+ */}
                             <div className="hidden sm:block overflow-x-auto">
                                 <table className="w-full border-collapse">
                                     <thead>
@@ -210,7 +208,6 @@ export default function Dashboard() {
                                 </table>
                             </div>
 
-                            {/* Card list for small screens */}
                             <div className="sm:hidden space-y-3">
                                 {filtered.length === 0 ? (
                                     <div className="text-center p-4 text-gray-400">No links found.</div>
