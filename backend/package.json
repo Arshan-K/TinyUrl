@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "This folder contains a minimal Express (Node.js) backend for a URL shortener. It's designed to work with a Postgres database via the `DATABASE_URL` environment variable.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "migrate": "node scripts/runMigration.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "helmet": "^7.2.0",
+    "morgan": "^1.10.1",
+    "pg": "^8.16.3",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
