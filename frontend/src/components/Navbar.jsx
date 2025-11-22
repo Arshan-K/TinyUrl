@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <nav className="bg-gray-900 text-white px-4 sm:px-6 py-4">
@@ -11,7 +13,7 @@ export default function Navbar() {
         {/* Desktop links */}
         <div className="hidden sm:flex gap-6 items-center">
           <a className="hover:text-gray-300" href="/">Dashboard</a>
-          <a className="hover:text-gray-300" href="/health">Healthz</a>
+          <button className="block py-2 px-2 rounded hover:bg-gray-800" onClick={() => navigate("/health")} >Healthz</button>
         </div>
 
         {/* Mobile menu button */}
@@ -49,7 +51,7 @@ export default function Navbar() {
       {open && (
         <div className="sm:hidden mt-2 px-2 pb-4">
           <a className="block py-2 px-2 rounded hover:bg-gray-800" href="/">Dashboard</a>
-          <a className="block py-2 px-2 rounded hover:bg-gray-800" href="/health">Healthz</a>
+          <button className="block py-2 px-2 rounded hover:bg-gray-800" onClick={() => navigate("/health")} >Healthz</button>
         </div>
       )}
     </nav>
